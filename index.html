@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goal Tracker with AI</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@google/generative-ai"></script>
+    <!-- Add this in the head section -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <h1>🎯 Goal Tracker</h1>
+        <div class="goal-input">
+            <input type="text" id="goalInput" placeholder="Enter a goal..." />
+            <button onclick="addGoal()">Add Goal</button>
+        </div>
+        <ul id="goalList"></ul>
+
+        <!-- Add this after the goalList ul -->
+        <div class="progress-container">
+            <canvas id="progressChart"></canvas>
+            <div id="progressText">0% Complete</div>
+        </div>
+
+        <h2>🧠 AI Assistant</h2>
+        <div id="chatBox" class="chat-box"></div>
+        <input id="chatInput" placeholder="Ask me about your goals or routine..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="team-details">
+        <table>
+            <tr>
+                <th>Reg No</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>12305523</td>
+                <td>Mintu Mol</td>
+            </tr>
+            <tr>
+                <td>12307151</td>
+                <td>Rituparna J</td>
+            </tr>
+            <tr>
+                <td>12307043</td>
+                <td>Vyshnavi N</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="bottom-right">
+        <p>Developed by IID</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
